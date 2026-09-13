@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mva-hackathon-starter"
+version = "0.1.0"
+description = "Privacy-safe intake and submission tooling for the MVA Hackathon 2026"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "CC-BY-4.0" }
+authors = [{ name = "MVA Hackathon participant" }]
+dependencies = []
+
+[project.optional-dependencies]
+download = ["huggingface-hub>=0.34,<2"]
+test = ["pytest>=8,<9"]
+
+[project.scripts]
+mva-intake = "mva_hackathon.intake:main"
+mva-submission = "mva_hackathon.submission:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,33 @@
+{
+  "notice": "FICTIONAL VALUES FOR FORMAT TESTING ONLY — DO NOT SUBMIT",
+  "candidates": [
+    {
+      "proband_id": "PROBAND01",
+      "chrom_1": "chr1",
+      "pos_1": 100001,
+      "ref_1": "A",
+      "alt_1": "G",
+      "chrom_2": "chr1",
+      "pos_2": 100777,
+      "ref_2": "C",
+      "alt_2": "T",
+      "epcr": 0.9,
+      "finding_type": "primary",
+      "notes": "Fictional compound-heterozygous pair used only to test the file format."
+    },
+    {
+      "proband_id": "PROBAND01",
+      "chrom_1": "chr2",
+      "pos_1": 200002,
+      "ref_1": "G",
+      "alt_1": "A",
+      "chrom_2": "",
+      "pos_2": "",
+      "ref_2": "",
+      "alt_2": "",
+      "epcr": 0.4,
+      "finding_type": "secondary",
+      "notes": "Fictional single variant used only to test the file format."
+    }
+  ]
+}

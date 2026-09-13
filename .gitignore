@@ -1,0 +1,38 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Patient-level and gated data: never commit.
+data/**
+!data/README.md
+artifacts/**
+!artifacts/README.md
+
+# Local candidate work and generated submissions.
+config/candidates.local.json
+submissions/*.csv
+
+# Genomic formats, even if copied outside data/ by accident.
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.vcf
+*.vcf.gz
+*.bcf
+*.bam
+*.bai
+*.cram
+*.crai
+*.tbi
+
+/data/raw/
+/data/processed/
+/data/reference/
+/artifacts/vep/*.vcf
+/artifacts/vep/*.log
+
+# Generated/reference images not for repository
+ChatGPT Image*.png
