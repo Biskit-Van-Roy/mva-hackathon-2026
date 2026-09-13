@@ -42,7 +42,7 @@ Inicia sesión en Hugging Face sin guardar el token dentro del proyecto:
 Descarga solo el VCF, su índice y el documento clínico:
 
 ```powershell
-./scripts/download-minimal.ps1./scripts/download-minimal.ps1./scripts/download-minimal.ps1./scripts/download-minimal.ps1
+./scripts/download-minimal.ps1
 ```
 
 Genera el informe técnico de entrada:
