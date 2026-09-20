@@ -19,6 +19,7 @@ test = ["pytest>=8,<9"]
 [project.scripts]
 mva-intake = "mva_hackathon.intake:main"
 mva-submission = "mva_hackathon.submission:main"
+mva-drug-ranking = "mva_hackathon.drug_ranking:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
