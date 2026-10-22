@@ -1,0 +1,15 @@
+{
+  "schema_version": "track2-drug-evidence-v1",
+  "positive_weights": {
+    "mechanistic_fit": 5,
+    "evidence_strength": 4,
+    "regulatory_fit": 5,
+    "experimental_testability": 5,
+    "scalability": 5
+  },
+  "penalty_weights": {
+    "safety_risk": 4,
+    "chromosomal_instability_risk": 6,
+    "patient_specific_conflict": 4
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "track2-drug-evidence-v1",
+  "candidates": [
+    {
+      "candidate_id": "synthetic-readthrough-probe",
+      "generic_name": "SYNTHETIC_READTHROUGH_PROBE",
+      "market_approved": true,
+      "approval_jurisdictions": ["SYNTHETIC_EXAMPLE"],
+      "target_intervention": "Premature-stop readthrough",
+      "mechanism_summary": "Synthetic record used only to test the public pipeline.",
+      "research_only": true,
+      "positive_scores": {
+        "mechanistic_fit": 5,
+        "evidence_strength": 3,
+        "regulatory_fit": 3,
+        "experimental_testability": 4,
+        "scalability": 3
+      },
+      "penalty_scores": {
+        "safety_risk": 3,
+        "chromosomal_instability_risk": 0,
+        "patient_specific_conflict": 2
+      },
+      "evidence": [
+        {
+          "evidence_type": "primary_mechanistic",
+          "citation": "synthetic://primary-mechanistic-example",
+          "supports": "Demonstrates the required schema without making a biomedical claim."
+        },
+        {
+          "evidence_type": "regulatory",
+          "citation": "synthetic://regulatory-example",
+          "supports": "Demonstrates how approval evidence is recorded."
+        },
+        {
+          "evidence_type": "safety",
+          "citation": "synthetic://safety-example",
+          "supports": "Demonstrates how material risks are retained."
+        }
+      ],
+      "risks": ["Synthetic risk entry; not for clinical use."],
+      "exclusion_reason": ""
+    },
+    {
+      "candidate_id": "synthetic-checkpoint-inhibitor",
+      "generic_name": "SYNTHETIC_CHECKPOINT_INHIBITOR",
+      "market_approved": false,
+      "approval_jurisdictions": [],
+      "target_intervention": "Mitotic-checkpoint inhibition",
+      "mechanism_summary": "Synthetic negative-control record retained to prove exclusions stay visible.",
+      "research_only": true,
+      "positive_scores": {
+        "mechanistic_fit": 1,
+        "evidence_strength": 2,
+        "regulatory_fit": 0,
+        "experimental_testability": 3,
+        "scalability": 1
+      },
+      "penalty_scores": {
+        "safety_risk": 4,
+        "chromosomal_instability_risk": 5,
+        "patient_specific_conflict": 4
+      },
+      "evidence": [
+        {
+          "evidence_type": "primary_mechanistic",
+          "citation": "synthetic://negative-control-primary",
+          "supports": "Demonstrates mechanism-based exclusion."
+        },
+        {
+          "evidence_type": "safety",
+          "citation": "synthetic://negative-control-safety",
+          "supports": "Demonstrates a material safety concern."
+        }
+      ],
+      "risks": ["Could worsen the biological defect represented by this synthetic example."],
+      "exclusion_reason": "MECHANISM_DIRECTION_OPPOSES_RESCUE"
+    }
+  ]
+}

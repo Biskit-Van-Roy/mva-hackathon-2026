@@ -1,6 +1,6 @@
 # MVA Hackathon 2026 — starter kit
 
-Base reproducible y segura para trabajar primero en **Track 1: Variant Prediction** y reutilizar después los hallazgos en **Track 2: Drug Repurposing**.
+Base reproducible y segura para **Track 1: Variant Prediction** y **Track 2: Drug Repurposing**.
 
 ## Decisión de estrategia
 
@@ -68,6 +68,22 @@ Copy-Item ./config/candidates.example.json ./config/candidates.local.json
 
 El validador comprueba las columnas oficiales, `PROBAND01`, GRCh38 por convención, pares completos, EPCR entre 0 y 1, orden descendente y el máximo de diez filas.
 
+## Demostración pública de Track 2
+
+El módulo Track 2 conserva todos los medicamentos evaluados, separa beneficio y riesgo, y evita que un candidato sin evidencia primaria, regulatoria y de seguridad entre a la lista corta. Sus puntuaciones son heurísticas de investigación, no probabilidades ni recomendaciones clínicas.
+
+Ejecuta el ejemplo completamente sintético:
+
+```powershell
+./.venv/Scripts/python.exe -m mva_hackathon.drug_ranking `
+  ./config/track2_candidates.example.json `
+  ./config/track2_scoring.json `
+  ./artifacts/track2/example_ranking.tsv `
+  ./artifacts/track2/example_summary.json
+```
+
+La metodología y las condiciones de elegibilidad se documentan en [`docs/TRACK2_SCORING_METHOD.md`](docs/TRACK2_SCORING_METHOD.md).
+
 ## Estructura
 
 ```text
@@ -84,4 +100,4 @@ mva-hackathon-starter/
 
 ## Siguiente hito
 
-Ejecutar `run-intake.ps1`. Con su salida técnica podremos elegir correctamente la anotación (VEP/ANN/ClinVar/gnomAD), definir filtros y construir el primer ranking sin adivinar el esquema real del VCF.
+Curar la matriz real de evidencia Track 2 con publicaciones primarias y fuentes regulatorias, definir la rúbrica de cada nivel y ejecutar un análisis de sensibilidad antes de proponer una lista corta.
