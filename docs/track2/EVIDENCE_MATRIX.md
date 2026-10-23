@@ -83,3 +83,41 @@ must remain outside the public repository.
 - Assign evidence-supported scores.
 - Run sensitivity analyses.
 - Prepare the scientific report and pitch.
+
+### 6. Primary scientific references
+
+#### Genetic mechanism
+ClinGen: BUB1B and mosaic variegated
+aneuploidy syndrome 1.
+https://search.clinicalgenome.org/CCID:004299
+
+#### Aminoglycoside readthrough
+Keeling KM, Bedwell DM (2002).
+Clinically relevant aminoglycosides can
+suppress disease-associated premature
+stop mutations in IDUA and P53.
+PMID: 12072912
+https://pubmed.ncbi.nlm.nih.gov/12072912/
+
+#### Sequence context dependency
+Statistical analysis of readthrough
+levels for nonsense mutations (2012).
+PMID: 22479203
+https://pubmed.ncbi.nlm.nih.gov/22479203/
+
+### 7. Evidence interpretation
+
+Evidence for aminoglycoside readthrough
+comes from other genetic contexts.
+
+BUB1B-specific functional rescue remains
+unverified.
+
+No clinical efficacy for MVA is established.
+
+Candidate ranking must distinguish:
+- Direct disease-specific evidence
+- Mechanistic evidence in other genes
+- Regulatory approval for other indications
+- Known safety risks
+- Unknown or missing evidence
