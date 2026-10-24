@@ -1,5 +1,33 @@
-# MVA Hackathon 2026 — starter kit
+# MVA Hackathon 2026 — Computational genomics and drug repurposing
 
+## Track 2 — Reviewer entry point
+
+**Participant:** Michael Roy Hidalgo (`Roy-Hidalgo` on Hugging Face)  
+**Video:** https://youtu.be/yjh3u7wnT70  
+**Report submitted to organizers:** `Roy-Hidalgo_track2_report.pdf` (use this name in the updated submission; the original submission used a different filename).
+
+### Research materials
+- [Scoring algorithm](src/mva_hackathon/drug_ranking.py) · [scoring method](docs/TRACK2_SCORING_METHOD.md)
+- [Sensitivity analysis](src/mva_hackathon/track2_sensitivity.py) · [sensitivity tests](tests/test_track2_sensitivity.py)
+- [Candidate comparison](docs/track2/DRUG_COMPARISON.md) · [evidence matrix](docs/track2/EVIDENCE_MATRIX.md)
+- [AI-assisted methodology disclosure](docs/track2/AI_DISCLOSURE.md)
+- [Evidence limitations and research validation plan](docs/track2/EVIDENCE_AUDIT_AND_SUBMISSION.md)
+
+### Public reproducibility check
+
+```bash
+python -m pytest tests/ -q
+python -m mva_hackathon.track2_sensitivity \
+  config/track2_candidates.example.json \
+  config/track2_scoring.json \
+  artifacts/track2/sensitivity_summary.json
+```
+
+**Observed local results:** 11 passing tests; 6,561 synthetic weight combinations. The synthetic input contains only one eligible candidate, so unchanged first place does **not** establish comparative drug-ranking robustness. Gentamicin, amikacin and tobramycin are **hypotheses for preclinical study**, not proven MVA interventions. No patient-specific data are published in this repository.
+
+---
+
+## Original starter-kit instructions
 Base reproducible y segura para **Track 1: Variant Prediction** y **Track 2: Drug Repurposing**.
 
 ## Decisión de estrategia
@@ -98,6 +126,6 @@ mva-hackathon-starter/
 └── tests/                  # Pruebas unitarias
 ```
 
-## Siguiente hito
+## Estado científico
 
-Curar la matriz real de evidencia Track 2 con publicaciones primarias y fuentes regulatorias, definir la rúbrica de cada nivel y ejecutar un análisis de sensibilidad antes de proponer una lista corta.
+Track 2 dispone de una implementación reproducible y de una comparación científica preliminar; no se ha demostrado eficacia clínica ni restauración funcional de BUBR1.
